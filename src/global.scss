@@ -1,0 +1,33 @@
+a {
+    font-family: $font__lato !important;
+    text-decoration: none;
+    color: brown;
+    position: relative;
+    overflow: hidden;
+
+    &:focus {
+        outline: none;
+    }
+
+    &:after {
+        content: "";
+        position: absolute;
+        z-index: -1;
+        right: 0;
+        width: 0;
+        bottom: -5px;
+        background: red;
+        height: 2px;
+        transition-property: width;
+        transition-duration: 0.3s;
+        transition-timing-function: ease-out;
+    }
+
+    &:hover:after,
+    &:focus:after,
+    &:active:after {
+        left: 0;
+        right: auto;
+        width: 100%;
+    }
+}
