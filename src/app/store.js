@@ -3,6 +3,7 @@ import getUser from '../features/Showslice'
 export const store = configureStore({
   reducer: {
     app: getUser
+    
   },
 })
 

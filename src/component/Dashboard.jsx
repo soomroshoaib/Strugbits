@@ -11,9 +11,7 @@ import { Modal, ModalBody, ModalHeader, Row, Col } from 'reactstrap'
 import { useState } from 'react';
 import UnfoldMoreIcon from '@mui/icons-material/UnfoldMore';
 import {
-    Button,
-
-   
+    Button,   
     ModalFooter,
     Input,
     Label,
@@ -45,26 +43,26 @@ const Dashboard = () => {
         // dispatch(createUser())
     }, [dispatch])
 
-    // const [users, setUsers] = useState({})
+    const [users, setUsers] = useState({})
     // const dispatch =  useDispatch()
     //  console.log(dispatch(createUser()))
     // const navigate = useNavigate()
 
 
 
-    //    const getUser =(e)=>{
-    //     setUsers({...users, [e.target.name]: e.target.value})
-    //     console.log(users)
-    //    }
+       const getUser =(e)=>{
+        setUsers({...users, [e.target.name]: e.target.value})
+        console.log(users)
+       }
 
-    //    const handlesubmit = (e) =>{
-    //     e.preventDefault()
-    //     dispatch(createUser(users))
-    //     console.log(users)
-    //     navigate("/")
+       const handlesubmit = (e) =>{
+        e.preventDefault()
+        // dispatch(createUser(users))
+        console.log(users)
 
 
-    //    }
+
+       }
     return (
         <div className='body'>
             <div className='Mein-div'>
@@ -107,16 +105,16 @@ const Dashboard = () => {
                                             type='text'
                                             placeholder='Username'
                                             className='form-control'
-                                        // name="name"
-                                        // onChange={getUser}
+                                        name="name"
+                                        onChange={getUser}
                                         />
                                         <br />
                                         <input
                                             type='text'
                                             placeholder='Customer Name'
                                             className='form-control'
-                                        // name="name"
-                                        // onChange={getUser}
+                                        name="name"
+                                        onChange={getUser}
                                         />
 
                                         <br />
@@ -124,12 +122,12 @@ const Dashboard = () => {
                                             type='text'
                                             placeholder='Email'
                                             className='form-control'
-                                        // name="email"
-                                        // onChange={getUser}
+                                        name="email"
+                                        onChange={getUser}
                                         />
                                         <br />
                                         <button className='popsbtn123'
-                                           
+                                           onClick={handlesubmit}
                                         > Add Coustomer</button>
                                     </div>
                                 </Col>

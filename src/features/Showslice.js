@@ -63,7 +63,13 @@ const gitUser = createSlice({
             state.users = action.payload;
 
         },
-    }
+    },
+    filter: "All",
+    // contact: {
+    //     image:"",
+    //     name: "",
+    //     email: "",
+    // }
     
 
     
